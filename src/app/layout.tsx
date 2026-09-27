@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Fraunces, Geist, Geist_Mono } from "next/font/google"
+import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google"
 
 import { site } from "../../content/site"
 
@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 })
 
-const fraunces = Fraunces({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  weight: ["500", "600", "700"],
+  variable: "--font-cormorant",
 })
 
 export const metadata: Metadata = {
@@ -26,14 +27,14 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#f3efe4",
+  themeColor: "#f4f1e8",
 }
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} h-full snap-y snap-proximity scroll-smooth antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

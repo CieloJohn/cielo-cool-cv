@@ -24,7 +24,8 @@ export type WorkItem = {
 export const site = {
   name: "Cielo John Bareza",
   /** Line breaks for the large name in the hero. */
-  nameLines: ["Cielo John", "Bareza"],
+  // nameLines: ["Cielo John", "Bareza"],
+  nameLines: ["Cielo John Bareza"],
   role: "Software developer",
   email: "barezacielojohn@gmail.com",
   github: "",
